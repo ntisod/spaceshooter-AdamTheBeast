@@ -2,6 +2,9 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+/// <summary>
+/// Bra så här långt. Skriv gärna ditt namn i en kommentar här.
+/// </summary>
 namespace SpaceShooter
 {
     /// <summary>

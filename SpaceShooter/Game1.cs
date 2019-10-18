@@ -14,7 +14,9 @@ namespace SpaceShooter
 
         //mina variabler
         Player player;
- 
+
+        PrintText printText;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -46,6 +48,8 @@ namespace SpaceShooter
 
             // TODO: use this.Content to load your game content here
             player = new Player(Content.Load<Texture2D>("Sprites/ship"), 380, 400, 2.5f, 4.5f);
+
+            printText = new PrintText (Content.Load<SpriteFont>("Sprites/myFont"));
 
         }
 
@@ -93,6 +97,7 @@ namespace SpaceShooter
             // TODO: Add your drawing code here
             spriteBatch.Begin();
             player.Draw(spriteBatch);
+            printText.Print("testutskrift", spriteBatch, 0, 0);
             spriteBatch.End();
 
             base.Draw(gameTime);

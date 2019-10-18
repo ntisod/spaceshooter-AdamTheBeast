@@ -4,21 +4,21 @@ using Microsoft.Xna.Framework.Input;
 
 namespace SpaceShooter
 {
-    class Player
+    class Player: MovingObject
     {
-        Texture2D texture; // Rymdskeppets texture
-        Vector2 vector; // Rymdskeppets koordinater
-        Vector2 speed; // Rymdskeppets hastighet
+        int points = 0;
 
         //Player(), konstruktor för att skapa spela-objektet
 
         public Player(Texture2D texture, float X, float Y, float speedX, float speedY) 
+            : base(texture, X, Y, speedX, speedY)
         {
              this.texture = texture;
              this.vector.X = X;
              this.vector.Y = Y;
              this.speed.X = speedX;
              this.speed.Y = speedY;
+
         }
 
         public void Update(GameWindow window)
@@ -70,20 +70,5 @@ namespace SpaceShooter
             }
         }
 
-
-
-        //Draw(, ritar ut spelaren på skärmen
-        public void Draw(SpriteBatch spriteBatch)
-
-
-        {
-            spriteBatch.Draw(texture, vector, Color.White);
-
-            
-
-
-
-
-        }
     }
 }
